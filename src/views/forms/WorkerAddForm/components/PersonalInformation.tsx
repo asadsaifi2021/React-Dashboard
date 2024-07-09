@@ -242,7 +242,7 @@ const PersonalInformation = ({
                                         <Field name="gender">
                                             {({ field, form }: FieldProps) => (
                                                 <Select
-                                                    placeholder="Gender"
+                                                    placeholder="Religion"
                                                     field={field}
                                                     form={form}
                                                     options={genderOptions}
