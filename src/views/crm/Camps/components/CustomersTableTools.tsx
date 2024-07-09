@@ -14,9 +14,15 @@ import CustomerTableSearch from './CustomerTableSearch';
 import CustomerTableFilter from './CustomerTableFilter';
 import cloneDeep from 'lodash/cloneDeep';
 import type { TableQueries } from '@/@types/common';
+import { useNavigate } from 'react-router-dom';
 
 const CustomersTableTools = () => {
     const dispatch = useAppDispatch();
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate(`/app/forms/CampAddForm`)
+    }
 
     const inputRef = useRef<HTMLInputElement>(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -108,7 +114,7 @@ const CustomersTableTools = () => {
                 <CustomerTableFilter />
             </div>
             <div className="mb-4">
-                <Button className="space-x-6 mr-4" size="sm" onClick={openModal}>
+                <Button className="space-x-6 mr-4" size="sm" onClick={handleClick}>
                     Add +
                 </Button>
 

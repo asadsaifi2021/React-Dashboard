@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react';
 import { ExclamationTriangleIcon } from '@heroicons/react/24/outline';
+import { Link, useNavigate } from 'react-router-dom';
 
 import Button from '@/components/ui/Button';
 import {
@@ -17,6 +18,11 @@ import type { TableQueries } from '@/@types/common';
 
 const CustomersTableTools = () => {
     const dispatch = useAppDispatch();
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate('/app/forms/WorkerAddForm');
+    };
 
     const inputRef = useRef<HTMLInputElement>(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -113,7 +119,7 @@ const CustomersTableTools = () => {
                 <CustomerTableFilter />
             </div>
             <div className="mb-4">
-                <Button className="space-x-6 mr-4" size="sm" onClick={openModal}>
+                <Button className="space-x-6 mr-4" size="sm" onClick={handleClick}>
                     Add +
                 </Button>
 

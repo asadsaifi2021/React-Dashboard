@@ -125,6 +125,42 @@ const appsRoute: Routes = [
         },
     },
     {
+        key: 'appsAccount.kycForm',
+        path: `${APP_PREFIX_PATH}/account/kyc-form`,
+        component: lazy(() => import('@/views/account/KycForm')),
+        authority: [ADMIN, USER],
+    },
+    {
+        key: 'appsForms.WorkerAddForm',
+        path: `${APP_PREFIX_PATH}/forms/WorkerAddForm`,
+        component: lazy(() => import('@/views/forms/WorkerAddForm')),
+        authority: [ADMIN, USER],
+    },
+    {
+        key: 'appsForms.ClientAddForm',
+        path: `${APP_PREFIX_PATH}/forms/ClientAddForm`,
+        component: lazy(() => import('@/views/forms/ClientAddForm')),
+        authority: [ADMIN, USER],
+    },
+    {
+        key: 'appsForms.ContractAddForm',
+        path: `${APP_PREFIX_PATH}/forms/ContractAddForm`,
+        component: lazy(() => import('@/views/forms/ContractAddForm')),
+        authority: [ADMIN, USER],
+    },
+    {
+        key: 'appsForms.AgencyAddForm',
+        path: `${APP_PREFIX_PATH}/forms/AgencyAddForm`,
+        component: lazy(() => import('@/views/forms/AgencyAddForm')),
+        authority: [ADMIN, USER],
+    },
+    {
+        key: 'appsForms.CampAddForm',
+        path: `${APP_PREFIX_PATH}/forms/CampAddForm`,
+        component: lazy(() => import('@/views/forms/CampAddForm')),
+        authority: [ADMIN, USER],
+    },
+    {
         key: 'appsCrm.customerDetails',
         path: `${APP_PREFIX_PATH}/crm/customer-details`,
         component: lazy(() => import('@/views/crm/CustomerDetail')),
