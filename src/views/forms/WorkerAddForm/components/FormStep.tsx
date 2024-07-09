@@ -11,7 +11,7 @@ type FormStepProps = {
 }
 
 const steps = [
-    { label: 'Personal information', value: 0 },
+    { label: 'Worker information', value: 0 },
     { label: 'Identification', value: 1 },
     { label: 'Address Information', value: 2 },
 ]
